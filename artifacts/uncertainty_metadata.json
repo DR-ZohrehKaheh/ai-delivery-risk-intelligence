@@ -1,0 +1,14 @@
+{
+  "method": "Percentile Bootstrap",
+  "resamples": 1000,
+  "confidence_level": 0.95,
+  "evaluation_dataset": "Historical holdout test",
+  "model": "Original XGBoost",
+  "limitations": [
+    "Assumes independent observations",
+    "Does not account for temporal distribution shift",
+    "Excludes orders without confirmed delivery",
+    "Does not quantify individual prediction uncertainty",
+    "Test data have already been inspected"
+  ]
+}

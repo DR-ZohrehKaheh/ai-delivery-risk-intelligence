@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this research software, please cite this repository. A DOI will be added after an archived release is published."
+title: "AI Delivery Risk Intelligence: E-commerce Delivery Risk Ranking and Uncertainty Analysis"
+type: software
+authors:
+  - family-names: "Kaheh"
+    given-names: "Zohreh"
+abstract: "A research prototype implementing XGBoost-based delivery-risk ranking, temporal validation, probability-calibration diagnostics, bootstrap evaluation intervals, and a Streamlit decision-support dashboard using historical e-commerce order data."
+repository-code: "https://github.com/DR-ZohrehKaheh/ai-delivery-risk-intelligence"
+url: "https://github.com/DR-ZohrehKaheh/ai-delivery-risk-intelligence"
+keywords:
+  - "machine learning"
+  - "XGBoost"
+  - "delivery risk"
+  - "e-commerce"
+  - "temporal validation"
+  - "uncertainty quantification"
+  - "risk prioritization"

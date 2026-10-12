@@ -8,6 +8,24 @@ Developed by [DR-ZohrehKaheh](https://github.com/DR-ZohrehKaheh). Built with Pyt
 
 > **Research demonstration only.** The project uses historical Brazilian e-commerce data and has not been validated for live commercial decisions. Model scores are not reliably calibrated real-world delivery-delay probabilities.
 
+## Dashboard preview
+
+The screenshots below show an **earlier locally run Streamlit prototype**. They document the UI and are not evidence of live deployment. The batch examples use **30 synthetic orders**; risk scores are experimental and are not consistently calibrated across historical periods.
+
+### 1. Single-order prediction
+
+![Single-order delivery risk score shown in the Streamlit prototype](docs/single_order_prediction.jpeg)
+
+### 2. Batch risk assessment
+
+![Batch assessment displaying results for 30 synthetic orders](docs/batch_assessment.jpeg)
+
+### 3. Risk score distribution
+
+![Histogram of experimental risk scores for synthetic orders](docs/risk_distribution.jpeg)
+
+The screenshots were captured during development; wording and arrangement in the current application may differ. For technical details, see [screenshot documentation](docs/README.md).
+
 ## What it does
 
 - Constructs order-level features from purchases, customers, and line items.
@@ -113,6 +131,16 @@ The independent training script reproduces training and validation only; calibra
 - Seller-clustered/time-block bootstrap, monitoring temporal drift, and calibration diagnostics
 - Automated integration tests with licensed data, model cards, and independent prospective validation
 - A genuinely prospective study before any operational deployment
+
+## Citation and DOI
+
+Citation metadata are supplied in [`CITATION.cff`](CITATION.cff). On GitHub, select **Cite this repository** to copy a software citation. A persistent DOI has **not yet been issued**. Once an archived GitHub release is published through Zenodo, this README and `CITATION.cff` will be updated with its **actual, verified DOI**.
+
+For now, cite the source repository as:
+
+> Kaheh, Z. (2026). *AI Delivery Risk Intelligence: E-commerce Delivery Risk Ranking and Uncertainty Analysis* [Software]. GitHub. https://github.com/DR-ZohrehKaheh/ai-delivery-risk-intelligence
+
+This software citation is separate from attribution of the [original Olist dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), whose license restrictions also apply.
 
 ## Permissions for source code
 

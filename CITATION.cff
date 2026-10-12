@@ -2,6 +2,8 @@ cff-version: 1.2.0
 message: "If you use this research software, please cite this repository. A DOI will be added after an archived release is published."
 title: "AI Delivery Risk Intelligence: E-commerce Delivery Risk Ranking and Uncertainty Analysis"
 type: software
+version: "0.1.0"
+date-released: "2026-10-12"
 authors:
   - family-names: "Kaheh"
     given-names: "Zohreh"

@@ -144,7 +144,9 @@ This software citation is separate from attribution of the [original Olist datas
 
 ## Permissions for source code
 
-The repository is public for technical portfolio review; **no software-use license is granted at present**. The Olist dataset's CC BY-NC-SA 4.0 terms are separate from any source-code permission. Do not redistribute the licensed dataset or dataset-derived model files from this repository without checking the applicable permissions.
+Copyright © 2026 Zohreh Kaheh. The repository is public for technical review and scholarly citation; **no general software reuse licence is granted**. Uses requiring the rights holder's permission must be authorised separately, subject to applicable law and platform terms. See [RIGHTS.md](RIGHTS.md) for the full rights statement and permission requests. Citation does not itself grant reuse permission.
+
+The Olist dataset's CC BY-NC-SA 4.0 terms are separate from the source-code rights. Raw data and generated model binaries are excluded.
 
 ## Documentation
 

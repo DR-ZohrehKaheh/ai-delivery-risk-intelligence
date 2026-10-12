@@ -1,0 +1,27 @@
+{
+  "project": "AI-Driven Delivery Risk Prediction",
+  "target": "late_delivery",
+  "population": "Confirmed delivered orders",
+  "feature_columns": [
+    "number_of_items",
+    "total_price",
+    "total_freight",
+    "number_of_sellers",
+    "number_of_products",
+    "promised_days",
+    "customer_state",
+    "purchase_month",
+    "purchase_weekday",
+    "purchase_hour"
+  ],
+  "validation_approach": "Chronological split",
+  "test_observations": 12507,
+  "observed_test_late_rate": 0.04805309026944911,
+  "limitations": [
+    "Retrospective evaluation",
+    "Selection bias from excluding unconfirmed deliveries",
+    "Potential right-censoring near dataset end",
+    "Temporal variation in event prevalence",
+    "Test results have been inspected"
+  ]
+}

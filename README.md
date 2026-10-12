@@ -2,6 +2,8 @@
 
 **A research and engineering portfolio project for delivery-risk ranking, probability-calibration diagnostics, and operational decision support.**
 
+[![Python unit tests](https://github.com/DR-ZohrehKaheh/ai-delivery-risk-intelligence/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/DR-ZohrehKaheh/ai-delivery-risk-intelligence/actions/workflows/tests.yml)
+
 Developed by [DR-ZohrehKaheh](https://github.com/DR-ZohrehKaheh). Built with Python, pandas, scikit-learn, XGBoost, Streamlit, Altair, and unit tests.
 
 > **Research demonstration only.** The project uses historical Brazilian e-commerce data and has not been validated for live commercial decisions. Model scores are not reliably calibrated real-world delivery-delay probabilities.
@@ -15,6 +17,21 @@ Developed by [DR-ZohrehKaheh](https://github.com/DR-ZohrehKaheh). Built with Pyt
 - Examines calibration instability and approximate bootstrap uncertainty of *performance metrics*.
 - Offers a Streamlit dashboard for single-order scoring, CSV batch processing, adjustable review capacity, ranked output, and a risk-score histogram.
 - Supports independent model training and automated tests.
+
+## Pipeline at a glance
+
+```text
+Kaggle Olist CSVs (download separately)
+    └─ Order-level joins and purchase-time features
+          └─ Chronological training + validation
+                └─ XGBoost pipeline → local joblib model
+                      └─ Streamlit single-order and CSV batch scoring
+
+Separate retrospective analyses:
+  Calibration diagnostics · Test evaluation · Bootstrap performance intervals
+```
+
+The dashboard is a **local, research-only demonstration**, not a deployed public application. Its Python model must be regenerated from the licensed input data before launch.
 
 ## Data and ethics
 
@@ -84,7 +101,7 @@ number_of_items,total_price,total_freight,number_of_sellers,number_of_products,p
 - `src/input_validation.py`: validated batch input schema
 - `tests/test_model.py`: dataset-independent unit tests
 - `01_ml_environment_test.ipynb` to `04_temporal_validation.ipynb`: exploratory notebooks and research diagnostics
-- `artifacts/`: aggregate test results, bootstrap tables and methodology metadata
+- `artifacts/`: aggregate test results, bootstrap confidence-interval summaries and methodology metadata (full bootstrap resamples are not published)
 - `data/README.md`: dataset acquisition instructions
 - `.github/workflows/tests.yml`: GitHub Actions tests
 
@@ -96,6 +113,10 @@ The independent training script reproduces training and validation only; calibra
 - Seller-clustered/time-block bootstrap, monitoring temporal drift, and calibration diagnostics
 - Automated integration tests with licensed data, model cards, and independent prospective validation
 - A genuinely prospective study before any operational deployment
+
+## Permissions for source code
+
+The repository is public for technical portfolio review; **no software-use license is granted at present**. The Olist dataset's CC BY-NC-SA 4.0 terms are separate from any source-code permission. Do not redistribute the licensed dataset or dataset-derived model files from this repository without checking the applicable permissions.
 
 ## Documentation
 

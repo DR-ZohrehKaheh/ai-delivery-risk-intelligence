@@ -3,6 +3,7 @@
 **A research and engineering portfolio project for delivery-risk ranking, probability-calibration diagnostics, and operational decision support.**
 
 [![Python unit tests](https://github.com/DR-ZohrehKaheh/ai-delivery-risk-intelligence/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/DR-ZohrehKaheh/ai-delivery-risk-intelligence/actions/workflows/tests.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23324488.svg)](https://doi.org/10.5281/zenodo.23324488)
 
 Developed by [DR-ZohrehKaheh](https://github.com/DR-ZohrehKaheh). Built with Python, pandas, scikit-learn, XGBoost, Streamlit, Altair, and unit tests.
 
@@ -134,13 +135,18 @@ The independent training script reproduces training and validation only; calibra
 
 ## Citation and DOI
 
-Citation metadata are supplied in [`CITATION.cff`](CITATION.cff). On GitHub, select **Cite this repository** to copy a software citation. A persistent DOI has **not yet been issued**. Once an archived GitHub release is published through Zenodo, this README and `CITATION.cff` will be updated with its **actual, verified DOI**.
+Version **0.1.0** is preserved in [Zenodo](https://zenodo.org/records/23324488) and corresponds to the [GitHub release](https://github.com/DR-ZohrehKaheh/ai-delivery-risk-intelligence/releases/tag/v0.1.0).
 
-For now, cite the source repository as:
+- **Version DOI:** [10.5281/zenodo.23324488](https://doi.org/10.5281/zenodo.23324488) — cite this for the specific archived software and results.
+- **Concept DOI:** [10.5281/zenodo.23324487](https://doi.org/10.5281/zenodo.23324487) — identifies the software across its archived versions and resolves to the latest version.
 
-> Kaheh, Z. (2026). *AI Delivery Risk Intelligence: E-commerce Delivery Risk Ranking and Uncertainty Analysis* [Software]. GitHub. https://github.com/DR-ZohrehKaheh/ai-delivery-risk-intelligence
+> Kaheh, Z. (2026). *AI Delivery Risk Intelligence: E-commerce Delivery Risk Ranking and Uncertainty Analysis* (Version 0.1.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23324488
 
-This software citation is separate from attribution of the [original Olist dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), whose license restrictions also apply.
+Use GitHub's **Cite this repository** button, [CITATION.cff](CITATION.cff), or [CITATION.bib](CITATION.bib) to copy a software citation. Please cite the version you actually consulted.
+
+The archive preserves release commit `da5ce573d88e74f19db96f6b37926faff6fd82ef`. Citation metadata were added to `main` after DOI registration; the archived release remains unchanged. See [archiving details](docs/ARCHIVING.md).
+
+Citation does not grant reuse permission; see [RIGHTS.md](RIGHTS.md). This software citation is separate from attribution of the [original Olist dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), whose licence restrictions also apply.
 
 ## Permissions for source code
 

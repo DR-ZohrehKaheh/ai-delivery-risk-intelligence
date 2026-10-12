@@ -28,12 +28,13 @@ The repository deliberately omits original Olist CSV files and serialized `.jobl
 
 ## Citation and archive
 
-Citation metadata: [`CITATION.cff`](../CITATION.cff). **No DOI is assigned until the release is archived by Zenodo**. Once Zenodo provides an actual DOI, it should be added to `CITATION.cff` and to the repository README.
+Published as [GitHub release v0.1.0](https://github.com/DR-ZohrehKaheh/ai-delivery-risk-intelligence/releases/tag/v0.1.0) and archived in [Zenodo](https://zenodo.org/records/23324488).
 
-## Notes for publishing
+- Version DOI: https://doi.org/10.5281/zenodo.23324488
+- Concept DOI: https://doi.org/10.5281/zenodo.23324487
+- Citation files on the default branch: [CITATION.cff](../CITATION.cff) and [CITATION.bib](../CITATION.bib)
+- Archive provenance and future-version instructions: [ARCHIVING.md](ARCHIVING.md)
 
-Suggested tag: `v0.1.0`
+## Rights
 
-Suggested release title: `v0.1.0 — Research portfolio prototype`
-
-Publish as a normal GitHub Release **after** enabling Zenodo archiving for the repository. Do not attach raw Olist datasets or generated `.joblib` models.
+Copyright © 2026 Zohreh Kaheh. All rights reserved. Public availability is for technical review and scholarly citation; no general software reuse licence is granted. See [RIGHTS.md](../RIGHTS.md). Raw Olist datasets and generated model binaries are excluded.

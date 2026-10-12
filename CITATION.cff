@@ -1,15 +1,17 @@
 cff-version: 1.2.0
-message: "If you use this research software, please cite this repository. A DOI will be added after an archived release is published."
+message: "Please cite the archived software version when referring to this project. Citation does not grant reuse permission; see RIGHTS.md."
 title: "AI Delivery Risk Intelligence: E-commerce Delivery Risk Ranking and Uncertainty Analysis"
 type: software
 version: "0.1.0"
 date-released: "2026-10-12"
+doi: "10.5281/zenodo.23324488"
+commit: "da5ce573d88e74f19db96f6b37926faff6fd82ef"
 authors:
   - family-names: "Kaheh"
     given-names: "Zohreh"
 abstract: "A research prototype implementing XGBoost-based delivery-risk ranking, temporal validation, probability-calibration diagnostics, bootstrap evaluation intervals, and a Streamlit decision-support dashboard using historical e-commerce order data."
 repository-code: "https://github.com/DR-ZohrehKaheh/ai-delivery-risk-intelligence"
-url: "https://github.com/DR-ZohrehKaheh/ai-delivery-risk-intelligence"
+url: "https://zenodo.org/records/23324488"
 keywords:
   - "machine learning"
   - "XGBoost"

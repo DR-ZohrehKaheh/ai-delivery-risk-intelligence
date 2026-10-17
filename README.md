@@ -111,6 +111,7 @@ number_of_items,total_price,total_freight,number_of_sellers,number_of_products,p
 
 - Brazilian customer state code, price and freight in BRL.
 - Weekday: Monday=0, Sunday=6; hour: 0–23.
+- Downloaded batch results escape formula-like text cells and headers for spreadsheet safety; model scores are unchanged.
 - Review priority means highest model scores in the *uploaded batch*, not verified benefit from an intervention.
 
 ## Project organization
@@ -125,6 +126,10 @@ number_of_items,total_price,total_freight,number_of_sellers,number_of_products,p
 - `.github/workflows/tests.yml`: GitHub Actions tests
 
 The independent training script reproduces training and validation only; calibration, retrospective test and bootstrap research were executed separately in the historical notebook. Excluded datasets and saved joblib files are **not** required to run the dataset-independent unit tests.
+
+## Current verification
+
+A [17 October 2026 audit](docs/VALIDATION.md) reran training and all notebook code cells on separately obtained Olist data, passed six tests and checked Streamlit single-order scoring. The rerun did **not exactly reproduce the earlier metric tables**; measured differences and the tested scope are documented in that record. Batch CSV downloads now escape spreadsheet-formula-like text.
 
 ## Next research and engineering steps
 

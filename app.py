@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-from src.input_validation import BRAZIL_STATES, REQUIRED_COLUMNS, validate_batch
+from src.input_validation import BRAZIL_STATES, REQUIRED_COLUMNS, validate_batch, spreadsheet_safe_csv
 
 st.set_page_config(page_title="AI Delivery Risk Intelligence", page_icon="📦", layout="wide")
 ROOT = Path(__file__).resolve().parent
@@ -138,7 +138,7 @@ if upload is not None:
         st.altair_chart(chart, width="stretch")
 
         st.download_button(
-            "Download ranked results", ranked.to_csv(index=False),
+            "Download ranked results", spreadsheet_safe_csv(ranked),
             file_name="delivery_risk_results.csv", mime="text/csv"
         )
         st.caption(

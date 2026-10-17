@@ -55,3 +55,17 @@ def validate_batch(frame: pd.DataFrame) -> pd.DataFrame:
     ):
         raise ValueError("Invalid purchase month, weekday, or hour")
     return data
+
+
+def spreadsheet_safe_csv(frame: pd.DataFrame) -> str:
+    """Escape formula-like text in CSV cells and headers, preserving numbers."""
+    def escape(value):
+        if isinstance(value, str) and value.lstrip().startswith(("=", "+", "-", "@")):
+            return "'" + value
+        if isinstance(value, str) and value.startswith(("\t", "\r", "\n")):
+            return "'" + value
+        return value
+
+    safe = frame.map(escape)
+    safe.columns = [escape(name) for name in frame.columns]
+    return safe.to_csv(index=False)

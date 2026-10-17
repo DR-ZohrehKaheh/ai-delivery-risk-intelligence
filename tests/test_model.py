@@ -4,7 +4,7 @@ import unittest
 import numpy as np
 import pandas as pd
 
-from src.input_validation import REQUIRED_COLUMNS, validate_batch
+from src.input_validation import REQUIRED_COLUMNS, validate_batch, spreadsheet_safe_csv
 from src.train import aggregate_order_items, build_features, create_snapshot, make_model
 
 
@@ -26,6 +26,20 @@ class DeliveryRiskTests(unittest.TestCase):
         invalid.loc[0, "number_of_sellers"] = 3
         with self.assertRaises(ValueError):
             validate_batch(invalid)
+
+    def test_csv_export_escapes_untrusted_text_without_changing_scores(self):
+        import io
+        frame = pd.DataFrame({
+            "=header": ["=1+1", " +SUM(A1)", "@SUM(A1)", "\ttext", "ordinary"],
+            "score": [0.1, 0.2, -0.3, 0.4, 0.5],
+        })
+        exported = pd.read_csv(io.StringIO(spreadsheet_safe_csv(frame)))
+        self.assertEqual(exported.columns[0], "'=header")
+        self.assertEqual(exported.iloc[:, 0].tolist(),
+                         ["'=1+1", "' +SUM(A1)", "'@SUM(A1)", "'\ttext", "ordinary"])
+        self.assertTrue(np.allclose(exported["score"], frame["score"]))
+        self.assertEqual(frame.columns[0], "=header")
+        self.assertEqual(frame.iloc[0, 0], "=1+1")
 
     def test_temporal_snapshot_excludes_future_outcomes(self):
         orders = pd.DataFrame({
